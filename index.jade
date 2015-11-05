@@ -1,0 +1,31 @@
+doctype html
+//- basic libraries: jquery(1.10.2), d3js(3.3.11), angularjs(1.2.3), bootstrap(3.0)/semantic-ui(0.9.3/0.9.5)
+//-                  fontawesome(4.4.0), reactjs(0.14.0)
+- var use = { cdn: true, og: false, favicon: true }
+- var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: true }
+- var assets = "assets"
+- var thumbnail = "thumbnail.png"
+- var favicon = "thumbnail.png"
+html(lang="en")
+  head(prefix="og: http://ogp.me/ns#")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title template
+    // libraries
+    include library.jade
+    // custom files
+    link(rel="stylesheet",type="text/css",href="index.css")
+    script(type="text/javascript",src="index.js")
+  body: #root
+    h1 Open Refine
+    h3 download
+    ul
+      li: a(href="mac.dmg") Mac
+      li: a(href="win.zip") Win
+      li
+        span .. or 
+        a(href="http://openrefine.org/download.html") Official Open Refine Download Page
+    h3 Sample File
+    ul
+      li: a(href="travel.xls") 台灣出國旅遊人數 - Travel.xls
+      li: a(href="village.xls") 村里長選舉資料 - village.xlsx
